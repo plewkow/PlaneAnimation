@@ -1,0 +1,133 @@
+body {
+  width: 90vw;
+  max-width: 500px;
+  margin: 100px auto;
+  background: #00ccff;
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+#plane {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 300px; /* Fixed width */
+  height: 150px; /* Fixed height */
+  transform: translate(-50%, -50%);
+  animation: fly-left 4s linear infinite;
+}
+
+.sun {
+  position: absolute;
+  top: 25px;
+  left: 25px;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: #ffff66;
+  border: 2px solid black;
+}
+
+.rect {
+  position: relative;
+  height: 40px; /* Fixed height */
+  width: 250px; /* Fixed width */
+  background: white;
+  border-radius: 50% / 200%;
+  border: 2px solid black;
+  clip-path: polygon(70% 0, 100% 0, 100% 100%, 70% 100%, 0 50%);
+}
+
+.wingleft, .wingright {
+  position: absolute;
+  width: 80px; /* Fixed width */
+  height: 20px; /* Fixed height */
+  background: white;
+  border: 2px solid black;
+  clip-path: polygon(0 0, 100% 50%, 0 100%, 0 50%);
+}
+
+.wingright {
+  top: 65px; /* Position relative to the plane body */
+  left: 110px; /* Fixed position */
+  transform: rotate(110deg);
+}
+
+.wingleft {
+  top: -43px; /* Position relative to the plane body */
+  left: 110px; /* Fixed position */
+  transform: rotate(-110deg);
+}
+
+
+.tail {
+  position: absolute;
+  top: -13px; /* Position above the plane body */
+  left: 0;
+  width: 20px;
+  height: 60px;
+  background: white;
+  border: 2px solid black;
+  clip-path: polygon(0 0, 100% 50%, 0 100%, 0 50%);
+}
+
+.window {
+  position: absolute;
+  top: 6px;
+  left: 200px;
+  width: 20px;
+  height: 30px;
+  border: 2px solid black;
+  background: black;
+}
+
+.clouds {
+  position: absolute;
+  top: 50px;
+  left: 100px;
+}
+
+.cloudOne, .cloudTwo, .cloudThree {
+  position: absolute;
+  width: 50px;
+  height: 25px;
+  background-color: #fff;
+  border-radius: 100px 100px 0 0;
+}
+
+.cloudOne {
+  top: 50px;
+  left: 100px;
+}
+
+.cloudTwo {
+  top: 100px;
+  left: 150px;
+}
+
+.cloudThree {
+  left: 125px;
+  top: 250px;
+}
+
+.cloudOne:before, .cloudTwo:before, .cloudThree:before {
+  content: "";
+  position:absolute;
+  width: 25px;
+  height: 12.5px;
+  background-color: #fff;
+  border-radius: 100px 100px 0 0;
+  left: -20px;
+  top: 12.5px;
+  box-shadow: 65px 0 #fff;
+}
+
+@keyframes fly-left {
+  0% {
+    transform: translate(-50%, -50%) translateX(-100vw);
+  }
+  100% {
+    transform: translate(-50%, -50%) translateX(100vw);
+  }
+}
