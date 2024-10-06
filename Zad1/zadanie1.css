@@ -12,8 +12,8 @@ body {
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 300px; /* Fixed width */
-  height: 150px; /* Fixed height */
+  width: 300px;
+  height: 150px;
   transform: translate(-50%, -50%);
   animation: fly-left 4s linear infinite;
 }
@@ -31,8 +31,8 @@ body {
 
 .rect {
   position: relative;
-  height: 40px; /* Fixed height */
-  width: 250px; /* Fixed width */
+  height: 40px;
+  width: 250px;
   background: white;
   border-radius: 50% / 200%;
   border: 2px solid black;
@@ -41,29 +41,29 @@ body {
 
 .wingleft, .wingright {
   position: absolute;
-  width: 80px; /* Fixed width */
-  height: 20px; /* Fixed height */
+  width: 80px;
+  height: 20px;
   background: white;
   border: 2px solid black;
   clip-path: polygon(0 0, 100% 50%, 0 100%, 0 50%);
 }
 
 .wingright {
-  top: 65px; /* Position relative to the plane body */
-  left: 110px; /* Fixed position */
+  top: 65px;
+  left: 110px;
   transform: rotate(110deg);
 }
 
 .wingleft {
-  top: -43px; /* Position relative to the plane body */
-  left: 110px; /* Fixed position */
+  top: -43px;
+  left: 110px;
   transform: rotate(-110deg);
 }
 
 
 .tail {
   position: absolute;
-  top: -13px; /* Position above the plane body */
+  top: -13px;
   left: 0;
   width: 20px;
   height: 60px;
