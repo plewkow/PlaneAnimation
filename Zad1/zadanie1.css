@@ -14,8 +14,7 @@ body {
   left: 50%;
   width: 300px;
   height: 150px;
-  transform: translate(-50%, -50%);
-  animation: fly-left 4s linear infinite;
+  animation: fly 4s linear infinite;
 }
 
 .sun {
@@ -27,6 +26,28 @@ body {
   border-radius: 50%;
   background: #ffff66;
   border: 2px solid black;
+}
+
+.cloud {
+  position: absolute;
+  width: 50px;
+  height: 25px;
+  background-color: #fff;
+  border-radius: 100px 100px 0 0;
+  top: 100px;
+  left: 150px;
+}
+
+.cloud:before {
+  content: "";
+  position:absolute;
+  width: 25px;
+  height: 12.5px;
+  background-color: #fff;
+  border-radius: 100px 100px 0 0;
+  left: -20px;
+  top: 12.5px;
+  box-shadow: 65px 0 #fff;
 }
 
 .rect {
@@ -60,10 +81,9 @@ body {
   transform: rotate(-110deg);
 }
 
-
 .tail {
   position: absolute;
-  top: -13px;
+  top: -11.5px;
   left: 0;
   width: 20px;
   height: 60px;
@@ -82,48 +102,7 @@ body {
   background: black;
 }
 
-.clouds {
-  position: absolute;
-  top: 50px;
-  left: 100px;
-}
-
-.cloudOne, .cloudTwo, .cloudThree {
-  position: absolute;
-  width: 50px;
-  height: 25px;
-  background-color: #fff;
-  border-radius: 100px 100px 0 0;
-}
-
-.cloudOne {
-  top: 50px;
-  left: 100px;
-}
-
-.cloudTwo {
-  top: 100px;
-  left: 150px;
-}
-
-.cloudThree {
-  left: 125px;
-  top: 250px;
-}
-
-.cloudOne:before, .cloudTwo:before, .cloudThree:before {
-  content: "";
-  position:absolute;
-  width: 25px;
-  height: 12.5px;
-  background-color: #fff;
-  border-radius: 100px 100px 0 0;
-  left: -20px;
-  top: 12.5px;
-  box-shadow: 65px 0 #fff;
-}
-
-@keyframes fly-left {
+@keyframes fly {
   0% {
     transform: translate(-50%, -50%) translateX(-100vw);
   }
